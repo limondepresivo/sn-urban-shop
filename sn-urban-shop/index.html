@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    /* estilos de los botones segun el rol */
+    #btn-admin,
+    #btn-cliente,
+    #btn-soporte {
+      display: none;
+    }
+
+    /* este boton aparece por defecto */
+    #btn-sin-rol {
+      display: inline-block;
+    }
+
+    /* segun el hash (#admin, #cliente, #soporte) muestro el boton */
+    #admin:target ~ .hero .hero-contenido #btn-admin {
+      display: inline-block;
+    }
+    #cliente:target ~ .hero .hero-contenido #btn-cliente {
+      display: inline-block;
+    }
+    #soporte:target ~ .hero .hero-contenido #btn-soporte {
+      display: inline-block;
+    }
+
+    /* oculto el boton por defecto si ya hay rol */
+    #admin:target ~ .hero .hero-contenido #btn-sin-rol,
+    #cliente:target ~ .hero .hero-contenido #btn-sin-rol,
+    #soporte:target ~ .hero .hero-contenido #btn-sin-rol {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- marcadores de rol que no se ven -->
+  <div id="admin"></div>
+  <div id="cliente"></div>
+  <div id="soporte"></div>
+
+  <!-- aqui va el banner de arriba -->
+  <header>
+    <h1>SN Urban Shop</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="hombres.html">Hombres</a>
+      <a href="mujeres.html">Mujeres</a>
+      <a href="accesorios.html">Accesorios</a>
+    </nav>
+  </header>
+
+  <!-- parte principal de bienvenida -->
+  <section class="hero">
+    <div class="hero-contenido">
+      <h2>Bienvenido a SN Urban Shop</h2>
+      <p>Tu estilo urbano, moderno y auténtico en un solo lugar.</p>
+
+      <!-- boton que sale primero sin rol -->
+      <a href="iniciar.html" class="btn" id="btn-sin-rol">Explorar Tienda</a>
+
+      <!-- botones que salen si hay rol -->
+      <a href="explora.html#admin" class="btn" id="btn-admin">Explorar Tienda</a>
+      <a href="explora.html#cliente" class="btn" id="btn-cliente">Explorar Tienda</a>
+      <a href="explora.html#soporte" class="btn" id="btn-soporte">Explorar Tienda</a>
+    </div>
+  </section>
+
+  <!-- pie de pagina -->
+  <footer>
+    <p>&copy; 2025 SN Urban Shop. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

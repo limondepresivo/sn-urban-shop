@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- seccion para el formulario de registro -->
+  <section class="registro">
+    <div class="card">
+      <div class="card-body">
+
+        <!-- formulario para registrarse -->
+        <form>
+          <h1>Registrarse</h1>
+          <p class="subtitulo">Crear una cuenta</p>
+
+          <!-- campos del formulario -->
+          <input type="text" id="fullName" placeholder="Nombre" required>
+          <input type="text" id="username" placeholder="Apellido" required>
+          <input type="email" id="email" placeholder="Correo" required>
+          <input type="password" id="password" placeholder="Contraseña" required>
+
+          <!-- boton para enviar el registro -->
+          <button type="button" class="btn" onclick="window.location.href='iniciar.html'">Registrarse</button>
+
+          <!-- enlace si ya tiene cuenta -->
+          <p class="texto-login">
+            Ya tienes una cuenta? <a href="iniciar.html">Iniciar sesion</a>
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
